@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 <!-- Daten sind dann am Ende im bts Paket (momentan auf github), Installation beispielsweise über devtools::install_github("johannes-titz/bts") -->
 
-<!-- Aufruf der Daten über data(...) nachdem bts geladen ist. -->
+<!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
 # bts
 

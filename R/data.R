@@ -52,3 +52,172 @@
 #' \url{http://bayes.acs.unt.edu:8083/BayesContent/class/Jon/R_SC/Module9/LMM_Examples.R}
 #' \url{http://bayes.acs.unt.edu:8083/BayesContent/class/Jon/R_SC/Module9/lmm.data.txt}
 "school"
+
+#' Fehlende Werte 1 (Missing Values 1)
+#'
+#' A fictitious dataset containing 4 variables with 30 missing values.
+#'
+#' @format A data frame with 100 rows and 4 variables:
+#' \describe{
+#'   \item{IQ}{IQ}
+#'   \item{Alter}{Age}
+#'   \item{LZ}{life satisfaction}
+#'   \item{KFZ}{car}
+#'   }
+"FW1"
+
+#' Fehlende Werte 2 (Missing Values 2)
+#'
+#' A fictitious dataset containing 4 variables with 45 missing values.
+#'
+#' @format A data frame with 100 rows and 4 variables:
+#' \describe{
+#'   \item{IQ}{IQ}
+#'   \item{Alter}{Age}
+#'   \item{LZ}{life satisfaction}
+#'   \item{KFZ}{car}
+#'   }
+"FW2"
+
+#' Depression
+#'
+#' A fictitious dataset for depression classification.
+#'
+#' @format A data frame with 40 rows and 3 variables:
+#' \describe{
+#'   \item{Depr}{Depression (d = depression; nd = no depression)}
+#'   \item{Gew}{weight in kg}
+#'   \item{Konz}{Concentration Test }
+#'   }
+"Depression"
+
+#' Stadt_dist
+#'
+#' Stdt_dist gives the distances (in km) between 5 cities in Germany.
+#'
+#' @format A symmetric data.frame with 5 rows.
+"Stadt_dist"
+
+#' Obst
+#'
+#' A fictitious data set with preferences for four different fruits.
+#'
+#' @format A data frame with 4 rows and 4 variables:
+#' \describe{
+#'   \item{Apfel}{Rating of apple}
+#'   \item{Birne}{Rating of pear}
+#'   \item{Kirsche}{Rating of cherry}
+#'   \item{Aprikose}{Rating of apricot}
+#'   }
+"Obst"
+
+#' Straftaten
+#'
+#' A data set with similarity ratings for ten criminal offenses measured by pairwise comparison.
+#'
+#' @format A data frame with 30 rows and 45 variables:
+#' \describe{
+#'   \item{UntSac}{similaryt between failure to assist a person in danger and damage to property}
+#'   \item{SteTru}{similaryt between misaptax evasionpropriation and drunk driving}
+#'   \item{SacWid}{similaryt between damage to property and resistance against enforcement officers}
+#'   \item{RauSte}{similaryt between misappropriation and tax evasion}
+#'   \item{SteUnt}{similaryt between tax evasion and failure to assist a person in danger}
+#'   \item{WidKoe}{similaryt between resistance against enforcement officers and damage to property}
+#'
+#'   \item{SteWid}{similaryt between tax evasion and resistance against enforcement officers}
+#'   \item{EinTru}{similaryt between misappropriation and drunk driving}
+#'   \item{KoeSac}{similaryt between misappropriation and damage to property}
+#'   \item{SteEin}{similaryt between tax evasion and damage to property}
+#'   \item{EinKoe}{similaryt between misappropriation and damage to property}
+#'   \item{VerWid}{similaryt between misappropriation and resistance against enforcement officers}
+#'   \item{WidRau}{similaryt between resistance against enforcement officers and damage to property}
+#'
+#'   \item{UntWid}{similaryt between failure to assist a person in danger and resistance against enforcement officers}
+#'   \item{KoeTru}{similaryt between misappropriation and drunk driving}
+#'   \item{EinUnt}{similaryt between misappropriation and failure to assist a person in danger}
+#'   \item{TruSac}{similaryt between drunk driving and damage to property}
+#'   \item{UntVer}{similaryt between failure to assist a person in danger and damage to property}
+#'   \item{TruUnt}{similaryt between drunk driving and failure to assist a person in danger}
+#'
+#'   \item{WahSac}{similaryt between misappropriation and damage to property}
+#'   \item{WidTru}{similaryt between resistance against enforcement officers and drunk driving}
+#'   \item{TruVer}{similaryt between drunk driving and damage to property}
+#'   \item{KoeSte}{similaryt between misappropriation and tax evasion}
+#'   \item{RauUnt}{similaryt between misappropriation and failure to assist a person in danger}
+#'   \item{KoeRau}{similaryt between misappropriation and damage to property}
+#'   \item{WidEin}{similaryt between resistance against enforcement officers and damage to property}
+#'
+#'   \item{SteWah}{similaryt between tax evasion and damage to property}
+#'   \item{KoeVer}{similaryt between misappropriation and damage to property}
+#'   \item{VerWah}{similaryt between misappropriation and damage to property}
+#'   \item{EinWah}{similaryt between misappropriation and damage to property}
+#'   \item{RauEin}{similaryt between misappropriation and damage to property}
+#'   \item{UntWah}{similaryt between failure to assist a person in danger and damage to property}
+#'
+#'   \item{SacVer}{similaryt between damage to property and damage to property}
+#'   \item{RauWah}{similaryt between misappropriation and damage to property}
+#'   \item{WahKoe}{similaryt between misappropriation and damage to property}
+#'   \item{RauTru}{similaryt between misappropriation and drunk driving}
+#'   \item{SteVer}{similaryt between tax evasion and damage to property}
+#'   \item{SacEin}{similaryt between damage to property and damage to property}
+#'   \item{RauVer}{similaryt between misappropriation and damage to property}
+#'
+#'   \item{WahWid}{similaryt between misappropriation and resistance against enforcement officers}
+#'   \item{RauSac}{similaryt between misappropriation and damage to property}
+#'   \item{TruWah}{similaryt between drunk driving and damage to property}
+#'   \item{KoeUnt}{similaryt between misappropriation and failure to assist a person in danger}
+#'   \item{VerEin}{similaryt between misappropriation and damage to property}
+#'   \item{SteSac}{similaryt between tax evasion and damage to property}
+#'   }
+"Straftaten"
+
+#' Strafen
+#'
+#'  EMPTY ....
+#'
+#' @format A data frame with 4 rows and 4 variables:
+#' \describe{
+#'   \item{Apfel}{Rating of apple}
+#'   \item{Birne}{Rating of pear}
+#'   \item{Kirsche}{Rating of cherry}
+#'   \item{Aprikose}{Rating of apricot}
+#'   }
+"Strafen"
+
+#' Sedlmeier
+#'
+#' A shortened dataset from Sedlmeier et al. (2018). The effect of six
+#' Meditation studies.
+#'
+#' @format A data frame with 6 rows and 4 variables:
+#' \describe{
+#'   \item{Studie}{Author of the study}
+#'   \item{Effekt_r}{Effectsize r}
+#'   \item{N}{Number of participants}
+#'   \item{AV}{Measurrement of the dependent variable}
+#'   }
+"Sedlmeier"
+
+#' pub_bias0
+#'
+#' A fictitious dataset with effectsizes from 56 studies.
+#'
+#' @format A data frame with 56 rows and 3 variables:
+#' \describe{
+#'   \item{N}{Number of participants}
+#'   \item{r}{Effectsize r}
+#'   \item{p}{p-value (two.tailed)}
+#'   }
+"pub_bias0"
+
+#' pub_bias1
+#'
+#' A dataset generated fram pub_bias0 with no nonsignificant p-values.
+#'
+#' @format A data frame with 28 rows and 3 variables:
+#' \describe{
+#'   \item{N}{Number of participants}
+#'   \item{r}{Effectsize r}
+#'   \item{p}{p-value (two.tailed)}
+#'   }
+"pub_bias1"

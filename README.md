@@ -5,7 +5,7 @@
 <!-- 1. In der Datei data-raw/DATASET.R Kommandos für das Holen der Daten ausführen. Am Ende über den Befehl usethis::use_data(...) Daten im Paket zur Verfügung stellen. Ich hab meine Dateien auch als csv gespeichert, sodass man sie gebündelt hat. -->
 <!-- 2. In der Datei R/data.R Datensatz dokumentieren -->
 <!-- Daten sind dann am Ende im bts Paket (momentan auf github), Installation beispielsweise über devtools::install_github("johannes-titz/bts") -->
-<!-- Aufruf der Daten über data(...) nachdem bts geladen ist. -->
+<!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
 # bts
 
@@ -59,11 +59,21 @@ Currently available data sets are:
 data(package = "bts")
 ```
 
-| Item     | Title                           |
-|:---------|:--------------------------------|
-| hdp      | Hospital Doctor Patient Dataset |
-| icecream | Ice cream rankings              |
-| school   | School data set                 |
+| Item        | Title                               |
+|:------------|:------------------------------------|
+| Depression  | Depression                          |
+| FW1         | Fehlende Werte 1 (Missing Values 1) |
+| FW2         | Fehlende Werte 2 (Missing Values 2) |
+| Obst        | Obst                                |
+| Sedlmeier   | Sedlmeier                           |
+| Stadt\_dist | Stadt\_dist                         |
+| Strafen     | Strafen                             |
+| Straftaten  | Straftaten                          |
+| hdp         | Hospital Doctor Patient Dataset     |
+| icecream    | Ice cream rankings                  |
+| pub\_bias0  | pub\_bias0                          |
+| pub\_bias1  | pub\_bias1                          |
+| school      | School data set                     |
 
 Data sets in bts
 
