@@ -25,20 +25,20 @@ usethis::use_data(school, overwrite = TRUE)
 ######################################
 ## Chapter: Missing Values
 
-# FW1
-FW1 <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW1.csv")
-write.csv(FW1, "data-raw/FW1.csv")
-usethis::use_data(FW1, overwrite = TRUE)
+# FW mcar
+FW_mcar <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_mcar.csv")
+write.csv(FW_mcar, "data-raw/FW_mcar.csv")
+usethis::use_data(FW_mcar, overwrite = TRUE)
 
-# FW2
-FW2 <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW2.csv")
-write.csv(FW2, "data-raw/FW1.csv")
-usethis::use_data(FW2, overwrite = TRUE)
+# FW mar
+FW_mar <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_mar.csv")
+write.csv(FW_mar, "data-raw/FW_mar.csv")
+usethis::use_data(FW_mar, overwrite = TRUE)
 
-# Depression
-Depression <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Depression.csv")
-write.csv(Depression, "data-raw/Depression.csv")
-usethis::use_data(Depression, overwrite = TRUE)
+# FW abbrecher
+FW_abbrecher <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_abbrecher.csv")
+write.csv(FW_abbrecher, "data-raw/FW_abbrecher.csv")
+usethis::use_data(FW_abbrecher, overwrite = TRUE)
 
 ######################################
 ## Chapter: MDS
