@@ -55,7 +55,7 @@
 
 #' Fehlende Werte 1 (Missing Values 1)
 #'
-#' A fictitious dataset containing 4 variables with 30 missing values.
+#' A fictitious dataset containing 4 variables with 30 values missing completly at random.
 #'
 #' @format A data frame with 100 rows and 4 variables:
 #' \describe{
@@ -64,11 +64,11 @@
 #'   \item{LZ}{life satisfaction}
 #'   \item{KFZ}{car}
 #'   }
-"FW1"
+"FW_mcar"
 
 #' Fehlende Werte 2 (Missing Values 2)
 #'
-#' A fictitious dataset containing 4 variables with 45 missing values.
+#' A fictitious dataset containing 4 variables with 45 values missing at random.
 #'
 #' @format A data frame with 100 rows and 4 variables:
 #' \describe{
@@ -77,19 +77,20 @@
 #'   \item{LZ}{life satisfaction}
 #'   \item{KFZ}{car}
 #'   }
-"FW2"
+"FW_mar"
 
-#' Depression
+#' Fehlende Werte 3 (Missing Values 3)
 #'
-#' A fictitious dataset for depression classification.
+#' A fictitious dataset containing 4 variables and a typical pattern of missing values which indicates a break off.
 #'
-#' @format A data frame with 40 rows and 3 variables:
+#' @format A data frame with 100 rows and 4 variables:
 #' \describe{
-#'   \item{Depr}{Depression (d = depression; nd = no depression)}
-#'   \item{Gew}{weight in kg}
-#'   \item{Konz}{Concentration Test }
+#'   \item{IQ}{IQ}
+#'   \item{Alter}{Age}
+#'   \item{LZ}{life satisfaction}
+#'   \item{KFZ}{car}
 #'   }
-"Depression"
+"FW_abbrecher"
 
 #' Stadt_dist
 #'
@@ -118,58 +119,78 @@
 #' @format A data frame with 30 rows and 45 variables:
 #' \describe{
 #'   \item{UntSac}{similaryt between failure to assist a person in danger and damage to property}
-#'   \item{SteTru}{similaryt between misaptax evasionpropriation and drunk driving}
+#'   \item{SteTru}{similaryt between tax evasion and drunk driving}
 #'   \item{SacWid}{similaryt between damage to property and resistance against enforcement officers}
 #'   \item{RauSte}{similaryt between misappropriation and tax evasion}
 #'   \item{SteUnt}{similaryt between tax evasion and failure to assist a person in danger}
 #'   \item{WidKoe}{similaryt between resistance against enforcement officers and damage to property}
 #'
 #'   \item{SteWid}{similaryt between tax evasion and resistance against enforcement officers}
-#'   \item{EinTru}{similaryt between misappropriation and drunk driving}
+#'   \item{EinTru}{similaryt between burglary and drunk driving}
 #'   \item{KoeSac}{similaryt between misappropriation and damage to property}
-#'   \item{SteEin}{similaryt between tax evasion and damage to property}
-#'   \item{EinKoe}{similaryt between misappropriation and damage to property}
-#'   \item{VerWid}{similaryt between misappropriation and resistance against enforcement officers}
+#'   \item{SteEin}{similaryt between tax evasion and burglary}
+#'   \item{EinKoe}{similaryt between burglary and damage to property}
+#'   \item{VerWid}{similaryt between rape and resistance against enforcement officers}
 #'   \item{WidRau}{similaryt between resistance against enforcement officers and damage to property}
 #'
 #'   \item{UntWid}{similaryt between failure to assist a person in danger and resistance against enforcement officers}
 #'   \item{KoeTru}{similaryt between misappropriation and drunk driving}
-#'   \item{EinUnt}{similaryt between misappropriation and failure to assist a person in danger}
+#'   \item{EinUnt}{similaryt between burglary and failure to assist a person in danger}
 #'   \item{TruSac}{similaryt between drunk driving and damage to property}
-#'   \item{UntVer}{similaryt between failure to assist a person in danger and damage to property}
+#'   \item{UntVer}{similaryt between failure to assist a person in danger and rape}
 #'   \item{TruUnt}{similaryt between drunk driving and failure to assist a person in danger}
 #'
 #'   \item{WahSac}{similaryt between misappropriation and damage to property}
 #'   \item{WidTru}{similaryt between resistance against enforcement officers and drunk driving}
-#'   \item{TruVer}{similaryt between drunk driving and damage to property}
+#'   \item{TruVer}{similaryt between drunk driving and rape}
 #'   \item{KoeSte}{similaryt between misappropriation and tax evasion}
 #'   \item{RauUnt}{similaryt between misappropriation and failure to assist a person in danger}
 #'   \item{KoeRau}{similaryt between misappropriation and damage to property}
-#'   \item{WidEin}{similaryt between resistance against enforcement officers and damage to property}
+#'   \item{WidEin}{similaryt between resistance against enforcement officers and burglary}
 #'
 #'   \item{SteWah}{similaryt between tax evasion and damage to property}
 #'   \item{KoeVer}{similaryt between misappropriation and damage to property}
 #'   \item{VerWah}{similaryt between misappropriation and damage to property}
-#'   \item{EinWah}{similaryt between misappropriation and damage to property}
-#'   \item{RauEin}{similaryt between misappropriation and damage to property}
+#'   \item{EinWah}{similaryt between burglary and damage to property}
+#'   \item{RauEin}{similaryt between misappropriation and burglary}
 #'   \item{UntWah}{similaryt between failure to assist a person in danger and damage to property}
 #'
-#'   \item{SacVer}{similaryt between damage to property and damage to property}
+#'   \item{SacVer}{similaryt between damage to property and rape}
 #'   \item{RauWah}{similaryt between misappropriation and damage to property}
 #'   \item{WahKoe}{similaryt between misappropriation and damage to property}
 #'   \item{RauTru}{similaryt between misappropriation and drunk driving}
-#'   \item{SteVer}{similaryt between tax evasion and damage to property}
-#'   \item{SacEin}{similaryt between damage to property and damage to property}
-#'   \item{RauVer}{similaryt between misappropriation and damage to property}
+#'   \item{SteVer}{similaryt between tax evasion and rape}
+#'   \item{SacEin}{similaryt between damage to property and burglary}
+#'   \item{RauVer}{similaryt between misappropriation and rape}
 #'
 #'   \item{WahWid}{similaryt between misappropriation and resistance against enforcement officers}
 #'   \item{RauSac}{similaryt between misappropriation and damage to property}
 #'   \item{TruWah}{similaryt between drunk driving and damage to property}
 #'   \item{KoeUnt}{similaryt between misappropriation and failure to assist a person in danger}
-#'   \item{VerEin}{similaryt between misappropriation and damage to property}
+#'   \item{VerEin}{similaryt between rape and burglary}
 #'   \item{SteSac}{similaryt between tax evasion and damage to property}
 #'   }
 "Straftaten"
+
+#' Straftaten agreggierte Distanzen
+#'
+#' A distance matrix with median aggregated distances for ten criminal offenses
+#'
+#' @format A distance matrix with 10 objects:
+#' \describe{
+#'   \item{Unt}{failure to assist a person in danger}
+#'   \item{Ste}{tax evasion}
+#'   \item{Sac}{damage to property}
+#'   \item{Rau}{misappropriation}
+#'   \item{Wid}{resistance against enforcement officers}
+#'   \item{Tru}{drunk driving}
+#'   \item{Sac}{damage to property}
+#'   \item{Ein}{burglary}
+#'   \item{Ver}{rape}
+#'   \item{Koe}{bodily injury}
+#'   }
+"St_dist_aggr"
+
 
 #' Strafen
 #'

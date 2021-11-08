@@ -25,20 +25,20 @@ usethis::use_data(school, overwrite = TRUE)
 ######################################
 ## Chapter: Missing Values
 
-# FW1
-FW1 <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW1.csv")
-write.csv(FW1, "data-raw/FW1.csv")
-usethis::use_data(FW1, overwrite = TRUE)
+# FW mcar
+FW_mcar <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_mcar.csv")
+write.csv(FW_mcar, "data-raw/FW_mcar.csv")
+usethis::use_data(FW_mcar, overwrite = TRUE)
 
-# FW2
-FW2 <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW2.csv")
-write.csv(FW2, "data-raw/FW1.csv")
-usethis::use_data(FW2, overwrite = TRUE)
+# FW mar
+FW_mar <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_mar.csv")
+write.csv(FW_mar, "data-raw/FW_mar.csv")
+usethis::use_data(FW_mar, overwrite = TRUE)
 
-# Depression
-Depression <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Depression.csv")
-write.csv(Depression, "data-raw/Depression.csv")
-usethis::use_data(Depression, overwrite = TRUE)
+# FW abbrecher
+FW_abbrecher <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/FW_abbrecher.csv")
+write.csv(FW_abbrecher, "data-raw/FW_abbrecher.csv")
+usethis::use_data(FW_abbrecher, overwrite = TRUE)
 
 ######################################
 ## Chapter: MDS
@@ -68,10 +68,17 @@ Straftaten <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Stra
 write.csv(Straftaten, "data-raw/Straftaten.csv")
 usethis::use_data(Straftaten, overwrite = TRUE)
 
-# Strafen
-Strafen <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Strafen.csv")
-write.csv(Strafen, "data-raw/Strafen.csv")
-usethis::use_data(Strafen, overwrite = TRUE)
+# St_dist_aggr
+St_dist_aggr <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_dist_aggr.csv",
+                         row.names = 1)
+write.csv(St_dist_aggr, "data-raw/St_dist_aggr.csv")
+usethis::use_data(St_dist_aggr, overwrite = TRUE)
+
+# St_dist_ind
+St_dist_ind <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_dist_ind.csv")#,
+                        #row.names = 1)
+write.csv(St_dist_ind, "data-raw/St_dist_ind.csv")
+usethis::use_data(St_dist_ind, overwrite = TRUE)
 
 ######################################
 ## Chapter: Metaanalyse
@@ -123,4 +130,52 @@ Arbeit <- read_delim("data-raw/Arbeit.csv",
                      delim = ";", escape_double = FALSE, trim_ws = TRUE)
 write.csv(Arbeit, "data-raw/Arbeit.csv")
 usethis::use_data(Depression, overwrite = TRUE)
+
+##### MB
+St_dist_aggr <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_dist_aggr.csv",
+                         row.names = 1)
+Straftaten <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Straftaten.csv")
+####################################################################
+# Exkurs
+# Funktion um paarweise verglichene Objekte in Distanzen umzuwandeln.
+get_distances_from_row <- function(sep_row, allnames) {
+  dist_list <- NULL
+  for (i in seq_along(allnames)) {
+    pat <- allnames[i]
+    # Extrahiere die Werte anhand der jeweiligen Straftat und füge die 0
+    # (die Ähnlichkeit der Straftat mit sich selbst) hinzu.
+    pat_means <- c(sep_row[grep(pat, names(sep_row))], 0)
+    # Extrahiere die Namen der Straftaten
+    allnames2 <- c(
+      unlist(lapply(
+        strsplit(names(sep_row[grep(pat, names(sep_row))]), split = pat),
+        function(x) x[length(x)])
+      ), pat)
+    # Füge die korrekten Bezeichnungen hinzu
+    names(pat_means) <- allnames2
+    # ordne die Werte alphabetisch nach der Bezeichnung
+    dist_list[[i]] <- pat_means[order(names(pat_means))]
+  }
+  # Speichere die Liste als Distanzmatrix
+  dists <- as.dist(do.call(cbind, dist_list), upper = T)
+  return(dists)
+}
+# Erstellung der Dsitanzmatrix
+allnames <- c("Ein", "Koe", "Rau", "Sac",  "Ste", "Tru", "Unt", "Ver", "Wah",
+              "Wid")
+St_dist_aggr <- get_distances_from_row(
+  sep_row = colMeans(Straftaten),
+  allnames = allnames)
+St_dist_aggr <- round(St_dist_aggr, 2)
+ind_dist_list <- NULL
+for (i in 1:30) {
+  ind_dist_list[[i]] <- get_distances_from_row(
+    Straftaten[i, ],
+    allnames = allnames)
+}
+###########################################################
+# Diese Liste soll asl Datensatz ins Datenpaket
+class(ind_dist_list)
+#write.csv(ind_dist_list, "data-raw/ind_dist_list.csv")
+usethis::use_data(ind_dist_list, overwrite = TRUE)
 
