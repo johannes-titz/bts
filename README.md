@@ -59,21 +59,22 @@ Currently available data sets are:
 data(package = "bts")
 ```
 
-| Item        | Title                           |
-|:------------|:--------------------------------|
-| Depression  |                                 |
-| FW1         |                                 |
-| FW2         |                                 |
-| Obst        |                                 |
-| Sedlmeier   |                                 |
-| Stadt\_dist |                                 |
-| Strafen     |                                 |
-| Straftaten  |                                 |
-| hdp         | Hospital Doctor Patient Dataset |
-| icecream    | Ice cream rankings              |
-| pub\_bias0  |                                 |
-| pub\_bias1  |                                 |
-| school      | School data set                 |
+| Item         | Title                               |
+|:-------------|:------------------------------------|
+| FW_abbrecher | Fehlende Werte 3 (Missing Values 3) |
+| FW_mar       | Fehlende Werte 2 (Missing Values 2) |
+| FW_mcar      | Fehlende Werte 1 (Missing Values 1) |
+| Obst         | Obst                                |
+| Sedlmeier    | Sedlmeier                           |
+| St_dist_aggr | Straftaten agreggierte Distanzen    |
+| St_dist_ind  | St_dist_ind                         |
+| Stadt_dist   | Stadt_dist                          |
+| Straftaten   | Straftaten                          |
+| hdp          | Hospital Doctor Patient Dataset     |
+| icecream     | Ice cream rankings                  |
+| pub_bias0    | pub_bias0                           |
+| pub_bias1    | pub_bias1                           |
+| school       | School data set                     |
 
 Data sets in bts
 

@@ -1,5 +1,7 @@
 ## code to prepare `DATASET` dataset goes here
 
+################################################
+# Chapter MEA
 # ice cream
 download.file("http://users.telenet.be/samuelfranssens/tutorial_data/icecream.xlsx",
               "iscreamforicecream.xlsx")
@@ -75,10 +77,39 @@ write.csv(St_dist_aggr, "data-raw/St_dist_aggr.csv")
 usethis::use_data(St_dist_aggr, overwrite = TRUE)
 
 # St_dist_ind
-St_dist_ind <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_dist_ind.csv")#,
-                        #row.names = 1)
-write.csv(St_dist_ind, "data-raw/St_dist_ind.csv")
+get_distances_from_row <- function(sep_row, allnames) {
+  dist_list <- NULL
+  for (i in seq_along(allnames)) {
+    pat <- allnames[i]
+    # Extrahiere die Werte anhand der jeweiligen Straftat und füge die 0
+    # (die Ähnlichkeit der Straftat mit sich selbst) hinzu.
+    pat_means <- c(sep_row[grep(pat, names(sep_row))], 0)
+    # Extrahiere die Namen der Straftaten
+    allnames2 <- c(
+      unlist(lapply(
+        strsplit(names(sep_row[grep(pat, names(sep_row))]), split = pat),
+        function(x) x[length(x)])
+      ), pat)
+    # Füge die korrekten Bezeichnungen hinzu
+    names(pat_means) <- allnames2
+    # ordne die Werte alphabetisch nach der Bezeichnung
+    dist_list[[i]] <- pat_means[order(names(pat_means))]
+  }
+  # Speichere die Liste als Distanzmatrix
+  dists <- as.dist(do.call(cbind, dist_list), upper = T)
+  return(dists)
+}
+# Erstellung der Dsitanzmatrix
+allnames <- c("Ein", "Koe", "Rau", "Sac",  "Ste", "Tru", "Unt", "Ver", "Wah",
+              "Wid")
+St_dist_ind <- NULL
+for (i in 1:30) {
+  St_dist_ind[[i]] <- get_distances_from_row(
+    Straftaten[i, ],
+    allnames = allnames)
+}
 usethis::use_data(St_dist_ind, overwrite = TRUE)
+
 
 ######################################
 ## Chapter: Metaanalyse
@@ -136,46 +167,3 @@ St_dist_aggr <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_
                          row.names = 1)
 Straftaten <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Straftaten.csv")
 ####################################################################
-# Exkurs
-# Funktion um paarweise verglichene Objekte in Distanzen umzuwandeln.
-get_distances_from_row <- function(sep_row, allnames) {
-  dist_list <- NULL
-  for (i in seq_along(allnames)) {
-    pat <- allnames[i]
-    # Extrahiere die Werte anhand der jeweiligen Straftat und füge die 0
-    # (die Ähnlichkeit der Straftat mit sich selbst) hinzu.
-    pat_means <- c(sep_row[grep(pat, names(sep_row))], 0)
-    # Extrahiere die Namen der Straftaten
-    allnames2 <- c(
-      unlist(lapply(
-        strsplit(names(sep_row[grep(pat, names(sep_row))]), split = pat),
-        function(x) x[length(x)])
-      ), pat)
-    # Füge die korrekten Bezeichnungen hinzu
-    names(pat_means) <- allnames2
-    # ordne die Werte alphabetisch nach der Bezeichnung
-    dist_list[[i]] <- pat_means[order(names(pat_means))]
-  }
-  # Speichere die Liste als Distanzmatrix
-  dists <- as.dist(do.call(cbind, dist_list), upper = T)
-  return(dists)
-}
-# Erstellung der Dsitanzmatrix
-allnames <- c("Ein", "Koe", "Rau", "Sac",  "Ste", "Tru", "Unt", "Ver", "Wah",
-              "Wid")
-St_dist_aggr <- get_distances_from_row(
-  sep_row = colMeans(Straftaten),
-  allnames = allnames)
-St_dist_aggr <- round(St_dist_aggr, 2)
-ind_dist_list <- NULL
-for (i in 1:30) {
-  ind_dist_list[[i]] <- get_distances_from_row(
-    Straftaten[i, ],
-    allnames = allnames)
-}
-###########################################################
-# Diese Liste soll asl Datensatz ins Datenpaket
-class(ind_dist_list)
-#write.csv(ind_dist_list, "data-raw/ind_dist_list.csv")
-usethis::use_data(ind_dist_list, overwrite = TRUE)
-

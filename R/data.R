@@ -174,7 +174,7 @@
 
 #' Straftaten agreggierte Distanzen
 #'
-#' A distance matrix with median aggregated distances for ten criminal offenses
+#' A distance matrix with mean aggregated distances for ten criminal offenses
 #'
 #' @format A distance matrix with 10 objects:
 #' \describe{
@@ -192,18 +192,25 @@
 "St_dist_aggr"
 
 
-#' Strafen
+#' St_dist_ind
 #'
-#'  EMPTY ....
+#' A list of 30 distance matrices with distances for ten criminal offenses.
+#' Each matrix represents a individual rating
 #'
-#' @format A data frame with 4 rows and 4 variables:
+#' @format A distance matrix with 10 objects:
 #' \describe{
-#'   \item{Apfel}{Rating of apple}
-#'   \item{Birne}{Rating of pear}
-#'   \item{Kirsche}{Rating of cherry}
-#'   \item{Aprikose}{Rating of apricot}
+#'   \item{Unt}{failure to assist a person in danger}
+#'   \item{Ste}{tax evasion}
+#'   \item{Sac}{damage to property}
+#'   \item{Rau}{misappropriation}
+#'   \item{Wid}{resistance against enforcement officers}
+#'   \item{Tru}{drunk driving}
+#'   \item{Sac}{damage to property}
+#'   \item{Ein}{burglary}
+#'   \item{Ver}{rape}
+#'   \item{Koe}{bodily injury}
 #'   }
-"Strafen"
+"St_dist_ind"
 
 #' Sedlmeier
 #'
