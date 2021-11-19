@@ -3,7 +3,7 @@
 \docType{data}
 \name{pub_bias0}
 \alias{pub_bias0}
-\title{pub_bias0}
+\title{dataset without publication bias}
 \format{
 A data frame with 56 rows and 3 variables:
 \describe{

@@ -3,7 +3,7 @@
 \docType{data}
 \name{Obst}
 \alias{Obst}
-\title{Obst}
+\title{Präferenz für Früchte (fruit rating)}
 \format{
 A data frame with 4 rows and 4 variables:
 \describe{

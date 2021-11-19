@@ -3,7 +3,7 @@
 \docType{data}
 \name{St_dist_ind}
 \alias{St_dist_ind}
-\title{St_dist_ind}
+\title{Individuelle Distanzen von Straftaten}
 \format{
 A distance matrix with 10 objects:
 \describe{

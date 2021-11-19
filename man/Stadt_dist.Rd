@@ -3,7 +3,7 @@
 \docType{data}
 \name{Stadt_dist}
 \alias{Stadt_dist}
-\title{Stadt_dist}
+\title{Distances of 5 german cities}
 \format{
 A symmetric data.frame with 5 rows.
 }

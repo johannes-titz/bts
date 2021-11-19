@@ -92,14 +92,14 @@
 #'   }
 "FW_abbrecher"
 
-#' Stadt_dist
+#' Distances of 5 german cities
 #'
 #' Stdt_dist gives the distances (in km) between 5 cities in Germany.
 #'
 #' @format A symmetric data.frame with 5 rows.
 "Stadt_dist"
 
-#' Obst
+#' Präferenz für Früchte (fruit rating)
 #'
 #' A fictitious data set with preferences for four different fruits.
 #'
@@ -192,7 +192,7 @@
 "St_dist_aggr"
 
 
-#' St_dist_ind
+#' Individuelle Distanzen von Straftaten
 #'
 #' A list of 30 distance matrices with distances for ten criminal offenses.
 #' Each matrix represents a individual rating
@@ -212,7 +212,33 @@
 #'   }
 "St_dist_ind"
 
-#' Sedlmeier
+#' Mediation von Lernleistung (Meadiation of learning achievement)
+#'
+#' A fictitious dataset containing 3 variables for mediation
+#'
+#' @format A data frame with 30 rows and 3 variables:
+#' \describe{
+#'   \item{Motivation}{Motivation}
+#'   \item{Lernleistung}{Learning achievement}
+#'   \item{Unterrichtsguete}{Teaching quality}
+#'   }
+"Lehr_Lern"
+
+#' Power_Pose
+#'
+#' A dataset of 16 cases beeing part of an powerposing experiment.
+#'
+#' @format A data frame with 10 rows and 3 variables:
+#' \describe{
+#'   \item{Pose}{Experimental condition: high powerpose vs. low powerpose}
+#'   \item{Dominanz}{Dominance rating by the neutral obeserver}
+#'   \item{Aktivitaet}{Activity}
+#'   \item{Fuehrung}{External rating of leadership}
+#'   \item{Moderator}{Moderation effect of Dom x Pose}
+#'   }
+"Power_Pose"
+
+#' 6 Meditationsstudien (6 Studys of Meditation)
 #'
 #' A shortened dataset from Sedlmeier et al. (2018). The effect of six
 #' Meditation studies.
@@ -224,9 +250,9 @@
 #'   \item{N}{Number of participants}
 #'   \item{AV}{Measurrement of the dependent variable}
 #'   }
-"Sedlmeier"
+"Meditation"
 
-#' pub_bias0
+#' dataset without publication bias
 #'
 #' A fictitious dataset with effectsizes from 56 studies.
 #'
@@ -238,7 +264,7 @@
 #'   }
 "pub_bias0"
 
-#' pub_bias1
+#' A dataset with publication bias
 #'
 #' A dataset generated fram pub_bias0 with no nonsignificant p-values.
 #'
@@ -249,3 +275,28 @@
 #'   \item{p}{p-value (two.tailed)}
 #'   }
 "pub_bias1"
+
+#' pedersen_2002
+#'
+#' Number of desired sexual partners
+#'
+#' @format  A dataset of 206 persons and their desired number of sexual partners.
+#' A modified Version of Pedersen et al. (2002).
+#' \describe{
+#'   \item{person_id}{ID of participants}
+#'   \item{desired}{Number of desired sexual partners}
+#'   \item{sex}{male vs. female}
+#'   }
+"pedersen_2002"
+
+#' VL17
+#'
+#' Preference for cats and dogs
+#'
+#' @format  A dataset of 50 preference ratings for cats and dogs.
+#' \describe{
+#'   \item{Hunde}{Preference for dogs}
+#'   \item{desired}{Preference for cats}
+#'   }
+"VL17"
+

@@ -110,20 +110,57 @@ for (i in 1:30) {
 }
 usethis::use_data(St_dist_ind, overwrite = TRUE)
 
+######################################
+## Chapter: Pfadanalysen
+####################################
+# ## generate non-scaled data
+library(MASS)
+library(Matrix)
+ms <- c(0, 0, 0) ### specify means
+S1 <- matrix(c(10, 8.6, 7.4,
+               8.6, 10, 7.5,
+               7.4, 7.5, 10
+) / 10,
+ncol = 3, byrow = T)
+# create data
+set.seed(123122)
+d <- as.data.frame(mvrnorm(n = 90, mu = ms, S1, tol = .5))
+round(cor(d), 2)
+Motivation <- c(98, 98, 103, 101, 100, 106, 111, 125, 120, 115)
+Motivation <- c(c(98, 98, 103, 101, 100, 106, 111, 125, 120, 115),
+                round(d$V1 * sd(Motivation) + mean(Motivation)))
+
+Lernleistung <- c(4, 5, 6, 7, 8, 10, 11, 12, 14, 15)
+Lernleistung <- abs(c(4, 5, 6, 7, 8, 10, 11, 12, 14, 15,
+                      round(d$V2 * sd(Lernleistung) + mean(Lernleistung))))
+
+Unterrichtsguete <- c(5, 6.5, 7, 5.5, 9, 6.5, 8, 10.5, 8, 10)
+Unterrichtsguete <- c(c(5, 6.5, 7, 5.5, 9, 6.5, 8, 10.5, 8, 10),
+                      round(d$V3 * sd(Unterrichtsguete) + mean(Unterrichtsguete),
+                            1))
+
+Lehr_Lern <- data.frame(Motivation, Lernleistung, Unterrichtsguete)
+Lehr_Lern <- Lehr_Lern[1:30, ]
+write.csv(Lehr_Lern, "data-raw/Lehr_Lern.csv")
+usethis::use_data(Lehr_Lern, overwrite = TRUE)
+
+Power_Pose <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Power_Pose.csv")
+write.csv(Power_Pose, "data-raw/Power_Pose.csv")
+usethis::use_data(Power_Pose, overwrite = TRUE)
 
 ######################################
 ## Chapter: Metaanalyse
 
-# Sedlmeier
-Sedlmeier <- data.frame(
+# Meditation
+Meditation <- data.frame(
   Studie = c("Geary_2011", "Carissoli_2015", "Kang_2014", "Shearer_2016a",
              "Shearer_2016b", "Greeson_2014"),
   Effekt_r = c(.32, -.05, .18, .5, .39, .22),
   N = c(108, 38, 68, 53, 47, 90),
   AV = c(rep( c("Fragebogen", "Heart Rate Variablity"), c(3,2)), "Fragebogen")
 )
-write.csv(Sedlmeier, "data-raw/Sedlmeier.csv")
-usethis::use_data(Sedlmeier, overwrite = TRUE)
+write.csv(Meditation, "data-raw/Meditation.csv")
+usethis::use_data(Meditation, overwrite = TRUE)
 
 # craate Data for publicationbias
 set.seed(546451)
@@ -167,3 +204,16 @@ St_dist_aggr <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/St_
                          row.names = 1)
 Straftaten <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Straftaten.csv")
 ####################################################################
+
+
+####################################################################
+# Chapter: Resampling-Verfahren
+
+# Pedersen
+pedersen_2002 <- read.csv("https://www.pearson-studium.de/einfuehrung_r/pedersen_2002.txt", sep = "")
+write.csv(pedersen_2002, "data-raw/pedersen_2002.csv")
+usethis::use_data(pedersen_2002, overwrite = TRUE)
+
+VL17 <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/VL17.csv")
+write.csv(pedersen_2002, "data-raw/VL17.csv")
+usethis::use_data(VL17, overwrite = TRUE)
