@@ -289,7 +289,7 @@
 #'   }
 "pedersen_2002"
 
-#' VL17
+#' VL_17
 #'
 #' Preference for cats and dogs
 #'
@@ -298,5 +298,41 @@
 #'   \item{Hunde}{Preference for dogs}
 #'   \item{desired}{Preference for cats}
 #'   }
-"VL17"
+"VL_17"
 
+#' Mehrere AVs in einem Einzelfall
+#'
+#' @format  Erwins Daten aus einem AB-Einzelfalldesign
+#' \describe{
+#'   \item{Fall}{Name der ProbandInnen}
+#'   \item{Phase}{Phase im Einzelfalldesign}
+#'   \item{Pos_Emot}{Positive Emotionen}
+#'   \item{Neg_Emot}{Negative Emotionen}
+#'   \item{Angst}{Angstrating}
+#'   \item{Depression}{Depressionrating}
+#'   }
+"Mehrere_AVs"
+
+#' 6 Meditierende im Multiple Baseline Design (scan-Paket)
+#'
+#' @format  6 TeilnehmerInnen aus dem Multiple Baseline Experiment von Matko
+#' et al. 2021 zur Wirkung von Meditation als scan-Objekt
+#' \describe{
+#'   \item{baseline}{Dauer der Baseline (d)}
+#'   \item{study_day}{Studientag}
+#'   \item{wellbeing}{Wohlbefinden}
+#'   \item{phase}{Phase im Multiple Baseline Design}
+#'   }
+"Wellbeing_Daten"
+
+#' 6 Meditierende im Multiple Baseline Design (data.frame)
+#'
+#' @format  6 TeilnehmerInnen aus dem Multiple Baseline Experiment von Matko
+#' et al. 2021 zur Wirkung von Meditation als data.frame.
+#' \describe{
+#'   \item{baseline}{Dauer der Baseline (d)}
+#'   \item{study_day}{Studientag}
+#'   \item{wellbeing}{Wohlbefinden}
+#'   \item{phase}{Phase im Multiple Baseline Design}
+#'   }
+"Wellbeing_kurz"

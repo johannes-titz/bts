@@ -1,6 +1,6 @@
-"","Hamburg","Köln","Frankfurt.am.Main","München","Berlin"
+"","Hamburg","Koeln","Frankfurt","Muenchen","Berlin"
 "Hamburg",0,357,393,613,254
-"Köln",357,0,153,456,477
-"Frankfurt.am.Main",393,153,0,304,423
-"München",613,456,304,0,504
+"Koeln",357,0,153,456,477
+"Frankfurt",393,153,0,304,423
+"Muenchen",613,456,304,0,504
 "Berlin",254,477,423,504,0

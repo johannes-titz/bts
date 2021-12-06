@@ -59,26 +59,29 @@ Currently available data sets are:
 data(package = "bts")
 ```
 
-| Item          | Title                                                           |
-|:--------------|:----------------------------------------------------------------|
-| FW_abbrecher  | Fehlende Werte 3 (Missing Values 3)                             |
-| FW_mar        | Fehlende Werte 2 (Missing Values 2)                             |
-| FW_mcar       | Fehlende Werte 1 (Missing Values 1)                             |
-| Lehr_Lern     | Mediation von Lernleistung (Meadiation of learning achievement) |
-| Meditation    | 6 Meditationsstudien (6 Studys of Meditation)                   |
-| Obst          | Präferenz für Früchte (fruit rating)                            |
-| Power_Pose    | Power_Pose                                                      |
-| St_dist_aggr  | Straftaten agreggierte Distanzen                                |
-| St_dist_ind   | Individuelle Distanzen von Straftaten                           |
-| Stadt_dist    | Distances of 5 german cities                                    |
-| Straftaten    | Straftaten                                                      |
-| VL17          | VL17                                                            |
-| hdp           | Hospital Doctor Patient Dataset                                 |
-| icecream      | Ice cream rankings                                              |
-| pedersen_2002 | pedersen_2002                                                   |
-| pub_bias0     | dataset without publication bias                                |
-| pub_bias1     | A dataset with publication bias                                 |
-| school        | School data set                                                 |
+| Item            | Title                                                           |
+|:----------------|:----------------------------------------------------------------|
+| FW_abbrecher    | Fehlende Werte 3 (Missing Values 3)                             |
+| FW_mar          | Fehlende Werte 2 (Missing Values 2)                             |
+| FW_mcar         | Fehlende Werte 1 (Missing Values 1)                             |
+| Lehr_Lern       | Mediation von Lernleistung (Meadiation of learning achievement) |
+| Meditation      | 6 Meditationsstudien (6 Studys of Meditation)                   |
+| Mehrere_AVs     | Mehrere AVs in einem Einzelfall                                 |
+| Obst            | Präferenz für Früchte (fruit rating)                            |
+| Power_Pose      | Power_Pose                                                      |
+| St_dist_aggr    | Straftaten agreggierte Distanzen                                |
+| St_dist_ind     | Individuelle Distanzen von Straftaten                           |
+| Stadt_dist      | Distances of 5 german cities                                    |
+| Straftaten      | Straftaten                                                      |
+| VL17            | VL17                                                            |
+| Wellbeing_Daten | 6 Meditierende im Multiple Baseline Design (scan-Paket)         |
+| Wellbeing_kurz  | 6 Meditierende im Multiple Baseline Design                      |
+| hdp             | Hospital Doctor Patient Dataset                                 |
+| icecream        | Ice cream rankings                                              |
+| pedersen_2002   | pedersen_2002                                                   |
+| pub_bias0       | dataset without publication bias                                |
+| pub_bias1       | A dataset with publication bias                                 |
+| school          | School data set                                                 |
 
 Data sets in bts
 

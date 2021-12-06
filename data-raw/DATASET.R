@@ -43,7 +43,7 @@ write.csv(FW_abbrecher, "data-raw/FW_abbrecher.csv")
 usethis::use_data(FW_abbrecher, overwrite = TRUE)
 
 ######################################
-## Chapter: MDS
+## Chapter 08 MDS
 
 # Stadt_dist
 library(readr)
@@ -149,7 +149,7 @@ write.csv(Power_Pose, "data-raw/Power_Pose.csv")
 usethis::use_data(Power_Pose, overwrite = TRUE)
 
 ######################################
-## Chapter: Metaanalyse
+## Chapter 02: Metaanalyse
 
 # Meditation
 Meditation <- data.frame(
@@ -207,13 +207,33 @@ Straftaten <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Stra
 
 
 ####################################################################
-# Chapter: Resampling-Verfahren
+# Chapter 03: Resampling-Verfahren
 
 # Pedersen
 pedersen_2002 <- read.csv("https://www.pearson-studium.de/einfuehrung_r/pedersen_2002.txt", sep = "")
 write.csv(pedersen_2002, "data-raw/pedersen_2002.csv")
 usethis::use_data(pedersen_2002, overwrite = TRUE)
 
-VL17 <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/VL17.csv")
+VL_17 <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/VL17.csv")
 write.csv(pedersen_2002, "data-raw/VL17.csv")
-usethis::use_data(VL17, overwrite = TRUE)
+usethis::use_data(VL_17, overwrite = TRUE)
+
+####################################################################
+# Chapter 9: Einzelfallanalyse
+Mehrere_AVs <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Mehrere_AVs.csv")
+write.csv(Mehrere_AVs, "data-raw/Mehrere_AVs.csv")
+usethis::use_data(Mehrere_AVs, overwrite = TRUE)
+
+library(scan)
+Wellbeing_Daten <- readSC("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/wellbeing_kurz.csv",
+                          cvar = "case", pvar = "phase",
+                          dvar = "wellbeing", mvar = "study_day",
+                          phase.names = c("A", "B"))
+usethis::use_data(Wellbeing_Daten, overwrite = TRUE)
+
+Wellbeing_kurz <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/wellbeing_kurz.csv")
+write.csv(Wellbeing_kurz, "data-raw/wellbeing_kurz.csv")
+usethis::use_data(Wellbeing_kurz, overwrite = TRUE)
+
+
+
