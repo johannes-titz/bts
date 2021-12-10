@@ -215,7 +215,7 @@ write.csv(pedersen_2002, "data-raw/pedersen_2002.csv")
 usethis::use_data(pedersen_2002, overwrite = TRUE)
 
 VL_17 <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/VL17.csv")
-write.csv(pedersen_2002, "data-raw/VL17.csv")
+write.csv(VL_17, "data-raw/VL_17.csv")
 usethis::use_data(VL_17, overwrite = TRUE)
 
 ####################################################################
@@ -235,5 +235,9 @@ Wellbeing_kurz <- read.csv("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/w
 write.csv(Wellbeing_kurz, "data-raw/wellbeing_kurz.csv")
 usethis::use_data(Wellbeing_kurz, overwrite = TRUE)
 
+###############################################################################
+# Chapter 5 Strukturgleichungsmodelle
 
-
+Arbeit <- read.csv2("https://www-user.tu-chemnitz.de/~burma/TUC_R/Band2/Arbeit.csv")
+write.csv(Arbeit, "data-raw/Arbeit.csv")
+usethis::use_data(Arbeit, overwrite = TRUE)

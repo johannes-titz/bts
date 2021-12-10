@@ -8,8 +8,8 @@
 A data frame with 30 rows and 3 variables:
 \describe{
 \item{Motivation}{Motivation}
-\item{Lernleistung}{Learning achievement}
-\item{Unterrichtsguete}{Teaching quality}
+\item{Lernleistung}{Lernleistung}
+\item{Unterrichtsguete}{Unterrichtsgüte}
 }
 }
 \usage{

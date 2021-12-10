@@ -60,9 +60,9 @@
 #' @format A data frame with 100 rows and 4 variables:
 #' \describe{
 #'   \item{IQ}{IQ}
-#'   \item{Alter}{Age}
-#'   \item{LZ}{life satisfaction}
-#'   \item{KFZ}{car}
+#'   \item{Alter}{Alter}
+#'   \item{LZ}{Lebenszufriedenheit}
+#'   \item{KFZ}{Besitzen Sie ein Auto?}
 #'   }
 "FW_mcar"
 
@@ -92,9 +92,10 @@
 #'   }
 "FW_abbrecher"
 
-#' Distances of 5 german cities
+#' Distanzen von 5 deutschen Städten
 #'
-#' Stdt_dist gives the distances (in km) between 5 cities in Germany.
+#' Stadt_dist ist eine Matrix mit den Entfernungen (Luftlinie in km) zwischen
+#' 5 deutschen Städten.
 #'
 #' @format A symmetric data.frame with 5 rows.
 "Stadt_dist"
@@ -219,8 +220,8 @@
 #' @format A data frame with 30 rows and 3 variables:
 #' \describe{
 #'   \item{Motivation}{Motivation}
-#'   \item{Lernleistung}{Learning achievement}
-#'   \item{Unterrichtsguete}{Teaching quality}
+#'   \item{Lernleistung}{Lernleistung}
+#'   \item{Unterrichtsguete}{Unterrichtsgüte}
 #'   }
 "Lehr_Lern"
 
@@ -325,10 +326,12 @@
 #'   }
 "Wellbeing_Daten"
 
+#' Lebenszufriedenheit von 6 Einzelfällen
+#'
 #' 6 Meditierende im Multiple Baseline Design (data.frame)
 #'
-#' @format  6 TeilnehmerInnen aus dem Multiple Baseline Experiment von Matko
-#' et al. 2021 zur Wirkung von Meditation als data.frame.
+#' @format  6 TeilnehmerInnen eines multiple Baseline Experiment von Matko
+#' et al. 2021 zur Wirkung von Meditation als data.frame im long-Format.
 #' \describe{
 #'   \item{baseline}{Dauer der Baseline (d)}
 #'   \item{study_day}{Studientag}
@@ -336,3 +339,23 @@
 #'   \item{phase}{Phase im Multiple Baseline Design}
 #'   }
 "Wellbeing_kurz"
+
+#' Befragung zur Arbeitszufriedenheit
+#'
+#' 176 Arbeitskräfte beantworten 10 Items zur Arbeitssituation.
+#'
+#' @format  176 Fälle bei 10 Variablen (data.frame)
+#' \describe{
+#'   \item{S1}{Mein Arbeitgeber achtet auf einen ordnungsgemäßen Arbeitsplatz.}
+#'   \item{S2}{Mein Arbeitgeber bietet mir die modernste / aktuellste Sicherheitsausstattung.}
+#'   \item{S3}{Mein Arbeitgeber hat Arbeitssicherheit Vorrang vor der Produktion.}
+#'   \item{Q1}{In meinem Betrieb geht Produktqualität vor Quantität.}
+#'   \item{Q2}{In meinem Betrieb wird Ressourcen Verschwendung vermieden.}
+#'   \item{Q3}{In meinem Betrieb versuchen erkrankte Mitarbeiter so schnell wie möglich an den Arbeitsplatz zurückzukehren.}
+#'   \item{Z1}{Ich bin zufrieden mit dem Organisationsklima und dem Teamgeist.}
+#'   \item{Z2}{Ich bin zufrieden mit den Arbeitsbedingungen.}
+#'   \item{Z3}{Ich bin zufrieden mit den Karrieremöglichkeiten in meinem Betrieb.}
+#'   \item{Lohn}{Wohlbefinden}
+#'   }
+"Arbeit"
+

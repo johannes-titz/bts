@@ -3,7 +3,7 @@
 \docType{data}
 \name{Stadt_dist}
 \alias{Stadt_dist}
-\title{Distances of 5 german cities}
+\title{Distanzen von 5 deutschen Städten}
 \format{
 A symmetric data.frame with 5 rows.
 }
@@ -11,6 +11,7 @@ A symmetric data.frame with 5 rows.
 Stadt_dist
 }
 \description{
-Stdt_dist gives the distances (in km) between 5 cities in Germany.
+Stadt_dist ist eine Matrix mit den Entfernungen (Luftlinie in km) zwischen
+5 deutschen Städten.
 }
 \keyword{datasets}

@@ -8,9 +8,9 @@
 A data frame with 100 rows and 4 variables:
 \describe{
 \item{IQ}{IQ}
-\item{Alter}{Age}
-\item{LZ}{life satisfaction}
-\item{KFZ}{car}
+\item{Alter}{Alter}
+\item{LZ}{Lebenszufriedenheit}
+\item{KFZ}{Besitzen Sie ein Auto?}
 }
 }
 \usage{

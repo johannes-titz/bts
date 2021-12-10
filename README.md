@@ -61,6 +61,7 @@ data(package = "bts")
 
 | Item            | Title                                                           |
 |:----------------|:----------------------------------------------------------------|
+| Arbeit          | Befragung zur Arbeitszufriedenheit                              |
 | FW_abbrecher    | Fehlende Werte 3 (Missing Values 3)                             |
 | FW_mar          | Fehlende Werte 2 (Missing Values 2)                             |
 | FW_mcar         | Fehlende Werte 1 (Missing Values 1)                             |
@@ -71,11 +72,12 @@ data(package = "bts")
 | Power_Pose      | Power_Pose                                                      |
 | St_dist_aggr    | Straftaten agreggierte Distanzen                                |
 | St_dist_ind     | Individuelle Distanzen von Straftaten                           |
-| Stadt_dist      | Distances of 5 german cities                                    |
+| Stadt_dist      | Distanzen von 5 deutschen Städten                               |
 | Straftaten      | Straftaten                                                      |
-| VL17            | VL17                                                            |
+| VL17            |                                                                 |
+| VL_17           | VL_17                                                           |
 | Wellbeing_Daten | 6 Meditierende im Multiple Baseline Design (scan-Paket)         |
-| Wellbeing_kurz  | 6 Meditierende im Multiple Baseline Design                      |
+| Wellbeing_kurz  | Lebenszufriedenheit von 6 Einzelfällen                          |
 | hdp             | Hospital Doctor Patient Dataset                                 |
 | icecream        | Ice cream rankings                                              |
 | pedersen_2002   | pedersen_2002                                                   |

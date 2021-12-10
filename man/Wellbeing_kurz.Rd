@@ -3,10 +3,10 @@
 \docType{data}
 \name{Wellbeing_kurz}
 \alias{Wellbeing_kurz}
-\title{6 Meditierende im Multiple Baseline Design (data.frame)}
+\title{Lebenszufriedenheit von 6 Einzelfällen}
 \format{
-6 TeilnehmerInnen aus dem Multiple Baseline Experiment von Matko
-et al. 2021 zur Wirkung von Meditation als data.frame.
+6 TeilnehmerInnen eines multiple Baseline Experiment von Matko
+et al. 2021 zur Wirkung von Meditation als data.frame im long-Format.
 \describe{
 \item{baseline}{Dauer der Baseline (d)}
 \item{study_day}{Studientag}
