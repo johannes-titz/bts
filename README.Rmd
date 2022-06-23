@@ -51,6 +51,7 @@ library(bts)
 data(icecream)
 head(icecream)
 ```
+
 ```{r include=FALSE}
 library(printr)
 ```
@@ -65,7 +66,5 @@ data(package = "bts")
 
 To get information about a data set use
 ```{r tidy=FALSE, comment=''}
-?icecream
-
+help(icecream)
 ```
-
