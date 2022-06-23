@@ -358,4 +358,3 @@
 #'   \item{Lohn}{Wohlbefinden}
 #'   }
 "Arbeit"
-
