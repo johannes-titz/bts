@@ -1,18 +1,18 @@
 Package: bts
-Title: What the Package Does (One Line, Title Case)
+Title: Provides Data Sets for Burkhardt, Titz, Sedlmeier 
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
+Authors@R: c( 
+    person(given = "Johannes",
+           family = "Titz",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           email = "johannes@titz.science",
+           comment = c(ORCID = "0000-0002-1102-5719"))
+           )
+Description: The package provides data sets for the book "Datenanalyse mit R: Fortgeschrittene Verfahren", Burkhardt, Titz, Sedlmeier, Pearson Studium Psychologie, (ISBN-10: 3868944133, ISBN-13: 978-3868944136).
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
 Depends: 
     R (>= 2.10)
