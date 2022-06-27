@@ -68,3 +68,6 @@ To get information about a data set use
 ```{r tidy=FALSE, comment=''}
 help(icecream)
 ```
+
+## Errata
+

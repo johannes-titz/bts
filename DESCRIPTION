@@ -6,7 +6,12 @@ Authors@R: c(
            family = "Titz",
            role = c("aut", "cre"),
            email = "johannes@titz.science",
-           comment = c(ORCID = "0000-0002-1102-5719"))
+           comment = c(ORCID = "0000-0002-1102-5719")),
+    person(given = "Markus",
+           family = "Burkhardt",
+           role = c("aut"),
+           email = "markus.burkhardt@psychologie.tu-chemnitz.de",
+           comment = c(ORCID = "0000-0002-2498-2999"))
            )
 Description: The package provides data sets for the book "Datenanalyse mit R: Fortgeschrittene Verfahren", Burkhardt, Titz, Sedlmeier, Pearson Studium Psychologie, (ISBN-10: 3868944133, ISBN-13: 978-3868944136).
 License: GPL (>= 3)
