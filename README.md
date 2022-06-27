@@ -1,4 +1,9 @@
 
+-   [Introduction](#introduction)
+-   [Installation and use](#installation-and-use)
+-   [Data sets](#data-sets)
+-   [Errata](#errata)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- ANLEITUNG FÜR MARKUS UND PETER -->
 <!-- Zwei Schritte: -->
@@ -7,7 +12,7 @@
 <!-- Daten sind dann am Ende im bts Paket (momentan auf github), Installation beispielsweise über devtools::install_github("johannes-titz/bts") -->
 <!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
-# bts
+## Introduction
 
 The package provides data sets for the book “Datenanalyse mit R:
 Fortgeschrittene Verfahren”, Burkhardt, Titz, Sedlmeier, Pearson Studium
@@ -35,16 +40,23 @@ To load the data, for instance icecream:
 library(bts)
 data(icecream)
 head(icecream)
-#>   Observations    Flavor       Packaging      Light     Organic   individual ranking
-#> 1    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 1       1
-#> 2    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 2       6
-#> 3    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 3       5
-#> 4    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 4       1
-#> 5    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 5       2
-#> 6    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 6       7
+#>   Observations    Flavor       Packaging      Light     Organic   individual
+#> 1    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 1
+#> 2    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 2
+#> 3    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 3
+#> 4    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 4
+#> 5    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 5
+#> 6    Profile 1 Raspberry Homemade waffle No low fat Not organic Individual 6
+#>   ranking
+#> 1       1
+#> 2       6
+#> 3       5
+#> 4       1
+#> 5       2
+#> 6       7
 ```
 
-## Data Sets
+## Data sets
 
 Currently available data sets are:
 
@@ -67,13 +79,11 @@ data(package = "bts")
 | St_dist_ind     | Individuelle Distanzen von Straftaten                           |
 | Stadt_dist      | Distanzen von 5 deutschen Städten                               |
 | Straftaten      | Straftaten                                                      |
-| VL17            |                                                                 |
 | VL_17           | VL_17                                                           |
 | Wellbeing_Daten | 6 Meditierende im Multiple Baseline Design (scan-Paket)         |
 | Wellbeing_kurz  | Lebenszufriedenheit von 6 Einzelfällen                          |
 | hdp             | Hospital Doctor Patient Dataset                                 |
 | icecream        | Ice cream rankings                                              |
-| ind_dist_list   |                                                                 |
 | pedersen_2002   | pedersen_2002                                                   |
 | pub_bias0       | dataset without publication bias                                |
 | pub_bias1       | A dataset with publication bias                                 |
@@ -116,6 +126,10 @@ Format:
 
 Source:
 
-     <https://help.xlstat.com/s/article/conjoint-analysis-in-excel-tutorial-new?language=en_US>
-     <http://users.telenet.be/samuelfranssens/tutorial_data/icecream.xlsx>
+     <URL:
+     https://help.xlstat.com/s/article/conjoint-analysis-in-excel-tutorial-new?language=en_US>
+     <URL:
+     http://users.telenet.be/samuelfranssens/tutorial_data/icecream.xlsx>
 ```
+
+## Errata

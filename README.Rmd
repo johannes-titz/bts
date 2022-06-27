@@ -1,6 +1,8 @@
 ---
 output: 
-  github_document
+  github_document:
+    toc: true
+    toc_depth: 2
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -25,7 +27,7 @@ knitr::opts_chunk$set(
 
 <!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
-# bts
+## Introduction
 
 The package provides data sets for the book "Datenanalyse mit R: Fortgeschrittene Verfahren", Burkhardt, Titz, Sedlmeier, Pearson Studium Psychologie, (ISBN-10: 3868944133, ISBN-13: 978-3868944136)
 
@@ -56,7 +58,7 @@ head(icecream)
 library(printr)
 ```
 
-## Data Sets
+## Data sets
 
 Currently available data sets are:
 
