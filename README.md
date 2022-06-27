@@ -1,5 +1,5 @@
 
--   [Introduction](#introduction)
+-   [BTS](#bts)
 -   [Installation and use](#installation-and-use)
 -   [Data sets](#data-sets)
 -   [Errata](#errata)
@@ -12,7 +12,7 @@
 <!-- Daten sind dann am Ende im bts Paket (momentan auf github), Installation beispielsweise über devtools::install_github("johannes-titz/bts") -->
 <!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
-## Introduction
+## BTS
 
 The package provides data sets for the book “Datenanalyse mit R:
 Fortgeschrittene Verfahren”, Burkhardt, Titz, Sedlmeier, Pearson Studium

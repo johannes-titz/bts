@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 
 <!-- Aufruf der Daten über data(...) nachdem bts geladen ist. Siehe auch die folgende Anleitung.-->
 
-## Introduction
+## BTS
 
 The package provides data sets for the book "Datenanalyse mit R: Fortgeschrittene Verfahren", Burkhardt, Titz, Sedlmeier, Pearson Studium Psychologie, (ISBN-10: 3868944133, ISBN-13: 978-3868944136)
 
